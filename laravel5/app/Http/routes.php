@@ -17,6 +17,25 @@
  // Route::get('pengguna/{pengguna?}', function ($pengguna="semuaaaa") {
  // 	return "Hello $pengguna"; //optional route parameter});
 
+Route::get('pengguna/lihat/{pengguna}','penggunaController@lihat');
+Route::post('pengguna/simpan','penggunaController@simpan');
+Route::get('pengguna/edit/{pengguna}','penggunaController@edit');
+Route::post('pengguna/edit/{pengguna}','penggunaController@update');
+Route::get('pengguna/hapus/{pengguna}','penggunaController@hapus');
+
+Route::get('matakuliah/lihat/{matakuliah}','MatakuliahController@lihat');
+Route::post('matakuliah/simpan','MatakuliahController@simpan');
+Route::get('matakuliah/edit/{matakuliah}','MatakuliahController@edit');
+Route::post('matakuliah/edit/{matakuliah}','MatakuliahController@update');
+Route::get('matakuliah/hapus/{matakuliah}','MatakuliahController@hapus');
+
+Route::get('ruangan/lihat/{ruangan}','RuanganController@lihat');
+Route::post('ruangan/simpan','RuanganController@simpan');
+Route::get('ruangan/edit/{ruangan}','RuanganController@edit');
+Route::post('ruangan/edit/{ruangan}','RuanganController@update');
+Route::get('ruangan/hapus/{ruangan}','RuanganController@hapus');
+
+
 Route::get('pengguna','penggunaController@awal');
 Route::get('pengguna/tambah','penggunaController@tambah');
 Route::get('pengguna/atul',function() // tugas yang enda dapat point
@@ -45,5 +64,10 @@ Route::get('jadwal_matakuliah/tambah','Jadwal_matakuliahController@tambah');
 
 Route::get('dosen_matakuliah','Dosen_matakuliahController@awal');
 Route::get('dosen_matakuliah/tambah','Dosen_matakuliahController@tambah');
+
+
+
+
+
 
 

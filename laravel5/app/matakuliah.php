@@ -8,5 +8,5 @@ class matakuliah extends Model
 {
     //
     protected $table= 'matakuliah';
-    protected $fillable =['title','keterangan'];
+    //protected $fillable =['title','keterangan'];
 }
