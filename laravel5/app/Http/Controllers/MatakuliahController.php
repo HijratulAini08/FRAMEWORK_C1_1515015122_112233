@@ -46,8 +46,10 @@ class MatakuliahController extends Controller
     public function update($id, Request $input)
     {
         $matakuliah = matakuliah::find($id);
-        $matakuliah->title = $input->title;
-        $matakuliah->keterangan= $input->keterangan;
+        $matakuliah->nama = $input->nama;
+        $matakuliah->nim = $input->nim;
+        $matakuliah->alamat = $input->alamat;
+        $matakuliah->pengguna_id = $input->pengguna_id;
         $informasi = $matakuliah->save()? 'berhasil update data' : 'gagal update data';
         return redirect('matakuliah')->with(['informasi'=>$informasi]);
     }
