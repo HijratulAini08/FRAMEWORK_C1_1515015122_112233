@@ -25,5 +25,17 @@ class dosen extends Model
                                                                   // (dosen_matakuliah::class,'dosen_id') -> dosen_matakuliah adalah nama dari model yang direlasikan pada model dosen.
                                                                   //                                         dosen_id adalah nama field yang berfungsi sebagai foreign key.
     }
+    public function getUsernameAttribute()
+    {
+      return $this->pengguna->username;
+    }
+
+    public function listDosenDanNip(){
+      $out =[];
+      foreach ($this->all() as $dosen){
+        $out[$dosen->id] = "{$dosen->nama} ({$dosen->nip})";
+      }
+      return $out;
+    }
 
 }

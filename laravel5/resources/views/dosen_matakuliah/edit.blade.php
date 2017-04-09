@@ -3,7 +3,7 @@
 
 <div class="panel panel-info">
 	<div class="panel-heading">
-		<strong><a href="{{url('dosen_matakuliah')}}"><i class="fa text-default fa-cheron-left"></i></a> Perbarui Data dosen_matakuliah</strong>
+		<strong><a href="{{ url('dosen_matakuliah') }}"><i class="fa text-default fa-cheron-left"></i></a> Perbarui Data Jadwal Dosen</strong>
 	</div>
 	{!! Form::model($dosen_matakuliah,['url'=>'dosen_matakuliah/edit/'.$dosen_matakuliah->id,'class'=>'form-horizontal']) !!}
 	@include('dosen_matakuliah.form')

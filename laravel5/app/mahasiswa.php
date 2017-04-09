@@ -25,5 +25,18 @@ class mahasiswa extends Model
                                                                        // (jadwal_matakuliah::class,'mahasiswa_id') -> jadwal_matakuliah adalah nama dari model yang direlasikan pada model mahasiswa.
                                                                        //                                              mahasiswa_id adalah nama field yang berfungsi sebagai foreign key.
     }
+    public function getUsernameAttribute()
+    {
+      return $this->pengguna->username;
+    }
+
+    public function listMahasiswaDanNim()
+    {
+      $out =[];
+      foreach ($this->all() as $mhs) {
+        $out[$mhs->id] = "{$mhs->nama} ({$mhs->nim})";
+      }
+      return $out;
+    }
 
 }

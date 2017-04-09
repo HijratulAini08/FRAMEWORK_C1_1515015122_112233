@@ -6,25 +6,33 @@
 	</div>
 	<table class="table">
 		<tr>
-			<td>nama</td>
+			<td>Nama Dosen</td>
 			<td>:</td>
 			<td>{{ $dosen->nama }}</td>
 		</tr>
 		<tr>
-			<td>nip</td>
+			<td>NIP</td>
 			<td>:</td>
 			<td>{{ $dosen->nip }}</td>
 		</tr>
 		<tr>
-			<td>alamat</td>
+			<td>Alamat</td>
 			<td>:</td>
 			<td>{{ $dosen->alamat }}</td>
 		</tr>
+
 		<tr>
-			<td>pengguna_id</td>
+			<td>Username</td>
 			<td>:</td>
-			<td>{{ $dosen->pengguna_id }}</td>
+			<td>{{ $dosen->pengguna->username }}</td>
 		</tr>
+
+		<tr>
+			<td>Password</td>
+			<td>:</td>
+			<td>{{ $dosen->pengguna->password }}</td>
+		</tr>
+
 		<tr>
 			<td class="col-xs-4">Dibuat tanggal</td>
 			<td class="col-cs-1">:</td>

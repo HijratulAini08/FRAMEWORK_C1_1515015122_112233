@@ -57,7 +57,7 @@ Route::get('pengguna/edit/{pengguna}','penggunaController@edit');
 Route::post('pengguna/edit/{pengguna}','penggunaController@update');
 Route::get('pengguna/hapus/{pengguna}','penggunaController@hapus');
 
-Route::get('mahasiswa/{mahasiswa}','MahasiswaController@lihat');
+Route::get('mahasiswa/lihat/{mahasiswa}','MahasiswaController@lihat');
 Route::post('mahasiswa/simpan','MahasiswaController@simpan');
 Route::get('mahasiswa/edit/{mahasiswa}','MahasiswaController@edit');
 Route::post('mahasiswa/edit/{mahasiswa}','MahasiswaController@update');

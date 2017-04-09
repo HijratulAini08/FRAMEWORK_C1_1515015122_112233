@@ -10,19 +10,20 @@
 		<thead>
 			<tr>
 				<th>No</th>
-				<th>Mahasiswa_id</th>
-				<th>Ruangan_id</th>
-				<th>Dosen_matakuliah_id</th>
+				<th>Nama Mahasiswa</th>
+				<th>NIM Mahasiswa</th>
+				<th>Nama Matakuliah</th>
+				<th>Aksi</th>
 			</tr>
 		</thead>
 		<tbody>
 			<?php $x=1; ?>
-			@foreach ($data as $jadwal_matakuliah)
+			@foreach ($semuajadwal_matakuliah as $jadwal_matakuliah)
 			<tr>
 				<td>{{ $x++}}</td>
-				<td>{{ $jadwal_matakuliah->mahasiswa_id or 'mahasiswa_id kosong' }}</td>
-				<td>{{ $jadwal_matakuliah->ruangan_id or 'ruangan_id kosong' }}</td>
-				<td>{{ $jadwal_matakuliah->dosen_matakuliah or 'dosen_matakuliah kosong' }}</td>
+				<td>{{ $jadwal_matakuliah->mahasiswa->nama or 'Nama Kosong kosong' }}</td>
+				<td>{{ $jadwal_matakuliah->mahasiswa->nim or 'Nim Kosong' }}</td>
+				<td>{{ $jadwal_matakuliah->dosen_matakuliah->matakuliah->title or 'Matakuliah Kosong' }}</td>
 				<td>
 					<div class="btn-group" role="group">
 						<a href="{{url('jadwal_matakuliah/edit/'.$jadwal_matakuliah->id)}}" class="btn btn-warning btn-xs" data-toogle="tooltip" data-placement="top" title="Ubah"><i class="fa fa-pencil"></i></a>
